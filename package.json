@@ -1,0 +1,12 @@
+{
+  "name": "sbbstationmonitor",
+  "version": "1.0.0",
+  "description": "simple rest api for sbb station monitor",
+  "main": "app.js",
+  "author": "samuelkaufmann",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "url": "^0.11.0"
+  }
+}
