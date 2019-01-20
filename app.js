@@ -1,15 +1,12 @@
 var express = require('express');
 var app = express();
-var url = require('url');
+app.set('view engine','ejs');
 
-app.get('/', function (req, res) {
-	var url_parts = url.parse(req.url, true);
-	var query = url_parts.query;
+app.get('/:name', function (req, res) {
 	var stationid = 8571216;
 	var limit = 1;
-	var apiResponse = getsbbdata(stationid, limit);
-	
-	res.send(apiResponse);
+	//var apiResponse = getsbbdata(stationid, limit);
+	res.render('index', {person: req.params.name});
 })
 
 function getsbbdata(stationid, limit) {
