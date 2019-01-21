@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+app.use('/static',express.static(__dirname + '/public'));
 app.set('view engine','ejs');
 
 app.get('/:name', function (req, res) {
