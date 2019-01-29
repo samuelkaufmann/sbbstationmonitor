@@ -1,13 +1,21 @@
 var express = require('express');
 var app = express();
-app.use('/static',express.static(__dirname + '/public'));
 app.set('view engine','ejs');
 
-app.get('/:name', function (req, res) {
+//ROUTES UI
+app.get('', function (req, res) {
+	var resData;
+	
+	res.render('ui/index', resData);
+})
+//ROUTES API
+app.get('/api/stationmonitor/:stationid/:limit', function (req, res) {
 	var stationid = 8571216;
 	var limit = 1;
+	stationid = req.params.stationid;
+	limit = req.params.limit;
 	//var apiResponse = getsbbdata(stationid, limit);
-	res.render('index', {person: req.params.name});
+	res.render('api/index', {person: stationid + limit});
 })
 
 function getsbbdata(stationid, limit) {
