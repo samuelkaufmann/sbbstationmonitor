@@ -4,7 +4,7 @@
   "description": "simple rest api for sbb station monitor",
   "main": "app.js",
   "author": "samuelkaufmann",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "ejs": "^2.6.1",
     "express": "^4.16.4",
